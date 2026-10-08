@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cherry &amp; Enjoy a Good Time Here </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1d3b2f;
+      --milk: #f2f4ee;
+      --crema: #e8b94a;
+      --cherry: #b3262e;
+      --ink: #17211c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Instrument Sans", system-ui, sans-serif;
+      background: var(--milk);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: "Bricolage Grotesque", Georgia, serif; line-height: 1.1; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--cherry); outline-offset: 3px; }
+ 
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 6%;
+      background: var(--green);
+      color: var(--milk);
+    }
+    .logo { font-family: "Bricolage Grotesque", Georgia, serif; font-weight: 800; font-size: 1.25rem; }
+    nav a { margin-left: 1.4rem; text-decoration: none; }
+    nav a:hover { text-decoration: underline; text-decoration-color: var(--crema); text-underline-offset: 6px; }
+ 
+    .hero {
+      background: var(--green);
+      color: var(--milk);
+      padding: 4rem 6% 5rem;
+    }
+    .hero h1 {
+      font-weight: 800;
+      font-size: clamp(2.8rem, 9vw, 6.5rem);
+      max-width: 12ch;
+      letter-spacing: -0.03em;
+    }
+    .hero p { max-width: 46ch; margin: 1.5rem 0 2rem; font-size: 1.15rem; color: #d5dfd6; }
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.6rem;
+      background: var(--crema);
+      color: var(--ink);
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 999px;
+    }
+    .btn:hover { background: #f2c964; }
+ 
+    section { padding: 4rem 6%; }
+    section > h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+    .lead { max-width: 52ch; margin-bottom: 2rem; color: #46544c; }
+ 
+    .menu { display: grid; gap: 2.5rem 4rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1000px; }
+    .menu h3 { font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--cherry); }
+    .item { display: flex; justify-content: space-between; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid #c9d1c9; }
+    .item span:first-child { font-weight: 600; }
+    .item small { display: block; font-weight: 400; color: #5b6a61; }
+ 
+    .beans { background: #e4e9df; }
+    .picker { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem; }
+    .picker button {
+      font: inherit;
+      padding: 0.6rem 1.2rem;
+      border: 2px solid var(--green);
+      background: transparent;
+      color: var(--green);
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .picker button[aria-pressed="true"] { background: var(--green); color: var(--milk); }
+    #roast-info { max-width: 52ch; font-size: 1.15rem; min-height: 4.5rem; }
+ 
+    .visit { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: 900px; }
+    .visit h3 { margin-bottom: 0.4rem; }
+ 
+    footer { padding: 1.5rem 6%; background: var(--ink); color: #b8c4bb; font-size: 0.9rem; }
+ 
+    @media (max-width: 600px) { nav a { margin-left: 0.9rem; } }
+  </style>
+</head>
+<body>
+ 
+  <header>
+    <div class="logo">Cherry &amp; Bean</div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#beans">Beans</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </header>
+ 
+  <div class="hero">
+    <h1>Coffee roasted this week.</h1>
+    <p>Small-batch beans from single farms, roasted every Tuesday and poured fresh at our counter.</p>
+    <a class="btn" href="#menu">See the menu</a>
+  </div>
+ 
+  <section id="menu">
+    <h2>Menu</h2>
+    <p class="lead">Everything is made with our own beans and whole milk or oat milk.</p>
+    <div class="menu">
+      <div>
+        <h3>Espresso bar</h3>
+        <div class="item"><span>Espresso<small>Double shot</small></span><span>Nu. 3.00</span></div>
+        <div class="item"><span>Flat white<small>Espresso, steamed milk</small></span><span>Nu. 4.50</span></div>
+        <div class="item"><span>Latte<small>Espresso, extra milk</small></span><span>Nu. 4.75</span></div>
+        <div class="item"><span>Mocha<small>Espresso, dark chocolate, milk</small></span><span>Nu. 5.25</span></div>
+      </div>
+      <div>
+        <h3>Filter and cold</h3>
+        <div class="item"><span>Pour over<small>Changes weekly</small></span><span>Nu. 4.25</span></div>
+        <div class="item"><span>Batch brew<small>Free refill</small></span><span>Nu. 3.25</span></div>
+        <div class="item"><span>Cold brew<small>Steeped 18 hours</small></span><span>Nu. 4.50</span></div>
+        <div class="item"><span>Iced latte<small>Espresso, milk, ice</small></span><span>Nu. 5.00</span></div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="beans" class="beans">
+    <h2>Choose your roast</h2>
+    <p class="lead">Pick a roast level to see what it tastes like.</p>
+    <div class="picker" role="group" aria-label="Roast level">
+      <button type="button" aria-pressed="true" data-roast="light">Light</button>
+      <button type="button" aria-pressed="false" data-roast="medium">Medium</button>
+      <button type="button" aria-pressed="false" data-roast="dark">Dark</button>
+    </div>
+    <p id="roast-info" aria-live="polite"></p>
+  </section>
+ 
+  <section id="visit">
+    <h2>Visit us</h2>
+    <p class="lead">Walk in, sit down, or take a bag of beans home.</p>
+    <div class="visit">
+      <div>
+        <h3>Hours</h3>
+        <p>Mon to Fri: 7am to 6pm<br>Sat and Sun: 8am to 4pm</p>
+      </div>
+      <div>
+        <h3>Address</h3>
+        <p>12 Market Lane<br>Your City</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="mailto:hello@cherryandbean.example">hello@cherryandbean.example</a></p>
+      </div>
+    </div>
+  </section>
+ 
+  <footer>&copy; 2026 Cherry &amp; Bean Coffee Roasters</footer>
+ 
+  <script>
+    const notes = {
+      light: "Bright and fruity, with notes of berry and citrus. Best as a pour over.",
+      medium: "Balanced and smooth, with caramel and nut flavors. Good for any brew method.",
+      dark: "Bold and rich, with dark chocolate and a smoky finish. Great for espresso and milk drinks."
+    };
+    const info = document.getElementById("roast-info");
+    const buttons = document.querySelectorAll(".picker button");
+    function show(level) {
+      info.textContent = notes[level];
+      buttons.forEach(b => b.setAttribute("aria-pressed", b.dataset.roast === level));
+    }
+    buttons.forEach(b => b.addEventListener("click", () => show(b.dataset.roast)));
+    show("light");
+  </script>
+</body>
+</html>
+ 
